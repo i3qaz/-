@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>موقع التسبيح</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background: linear-gradient(to bottom, #e6e9f0, #eef1f5);
+      color: #0f5132;
+      text-align: center;
+    }
+    header {
+      background-color: #0d6efd;
+      color: white;
+      padding: 20px;
+      font-size: 2rem;
+      border-bottom: 5px solid #198754;
+    }
+    .counter {
+      font-size: 5rem;
+      margin: 50px 0;
+    }
+    .btns button {
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .btn-tasbih {
+      background-color: #198754;
+      color: white;
+    }
+    .btn-reset {
+      background-color: #dc3545;
+      color: white;
+    }
+    footer {
+      background-color: #f8f9fa;
+      padding: 20px;
+      font-size: 1rem;
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    موقع التسبيح
+  </header>
+
+  <div class="counter" id="counter">0</div>
+
+  <div class="btns">
+    <button class="btn-tasbih" onclick="increment()">سبحان الله</button>
+    <button class="btn-reset" onclick="resetCounter()">إعادة</button>
+  </div>
+
+  <footer>
+    &copy; 2025 | موقع تسبيح إسلامي بسيط
+  </footer>
+
+  <script>
+    let count = 0;
+    const counterEl = document.getElementById('counter');
+
+    function increment() {
+      count++;
+      counterEl.textContent = count;
+    }
+
+    function resetCounter() {
+      count = 0;
+      counterEl.textContent = count;
+    }
+  </script>
+</body>
+</html>
